@@ -45,6 +45,7 @@ knowledge-atlas/
 ├── data/                    # SQLite 数据库 + 上传文件(gitignore)
 ├── frontend/                # React + Cytoscape.js
 ├── start.sh                 # WSL 一键启动
+├── LICENSE                  # MIT 许可证
 └── README.md
 ```
 
@@ -187,3 +188,8 @@ python3 -m pytest tests -q
 - **抽取很慢**:调小 `.env` 里的 `MAX_CHUNKS_PER_DOC`。
 - **重启后表结构报错**:新增字段(如 `trash.stack`)不会自动迁移旧库,删掉 `data/` 目录让表重建即可。
 - **图谱节点很多**:超过 80 个节点会自动进入大图模式,只渲染核心节点,双击可展开邻居,也可在「视图」里切换为显示全部。
+
+## 许可证
+
+本项目采用 [MIT License](LICENSE) 授权,可自由使用、修改、分发与商用,
+只需保留原始版权声明与许可声明即可。软件按「原样」提供,不含任何形式的担保。
