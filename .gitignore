@@ -1,0 +1,32 @@
+# 模型密钥与本地环境,绝不入库
+backend/.env
+.env
+*.env
+# 变体与备份同样可能含真实密钥(如 backend/.env.save):
+# 先一律排除,再显式放行只含占位符的模板
+.env.*
+*.env.*
+!.env.example
+
+# 数据与上传文件
+data/
+*.db
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

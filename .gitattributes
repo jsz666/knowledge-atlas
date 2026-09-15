@@ -1,0 +1,15 @@
+# 统一换行符:工作区一律 LF
+# 原因:start.sh / start_backend.sh 需要在 WSL 里由 bash 执行,
+# 若在 Windows 上检出为 CRLF,bash 会报 "\r: command not found"。
+* text=auto eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 二进制文件不做换行转换
+*.db binary
+*.sqlite3 binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.docx binary
